@@ -2,80 +2,285 @@ body {
   margin: 0;
   padding: 0;
   font-size: 13px;
+  background-color: #ecf2f8;
+  font-family: "Barlow Semi Condensed", Arial, Helvetica, sans-serif;
 }
 
 .container {
-  width: 50%;
-  margin: auto;
-  background-color: lightcoral;
+  width: 70%;
+  margin: 2rem auto 2rem auto;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (1fr)[4];
       grid-template-columns: repeat(4, 1fr);
   -ms-grid-rows: (1fr)[2];
       grid-template-rows: repeat(2, 1fr);
-      grid-template-areas: "1 1 2 5" "3 4 4 5";
+  grid-gap: 2rem;
 }
 
 .card1 {
   -ms-grid-row: 1;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 2;
   grid-area: 1;
-  background-color: red;
   -ms-grid-column: 1;
   -ms-grid-column-span: 2;
   grid-column: 1 / 3;
+  color: white;
+  background-color: #7541c8;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 2rem;
+  border-radius: 10px;
+}
+
+.card1 .info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.card1 .info .pic {
+  width: 30px;
+  height: 30px;
+  margin: 0 1rem 0 0;
+  border-radius: 50px;
+  border: 2px solid #ae90df;
+}
+
+.card1 .info .name {
+  margin: 0;
+}
+
+.card1 .info .verified {
+  margin: 0;
+  opacity: .7;
+}
+
+.card1 .main-para {
+  font-weight: 600;
+  font-size: 1.3rem;
+  padding: 1rem 0;
+}
+
+.card1 .sub-para {
+  opacity: .5;
+  line-height: 1.3rem;
 }
 
 .card2 {
-  -ms-grid-row: 1;
-  -ms-grid-column: 3;
-  grid-area: 2;
-  background-color: royalblue;
   -ms-grid-column: 3;
   -ms-grid-column-span: 1;
   grid-column: 3 / 4;
   -ms-grid-row: 1;
   grid-row: 1;
+  color: white;
+  background-color: #48556a;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 2rem;
+  border-radius: 10px;
+}
+
+.card2 .info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.card2 .info .pic {
+  width: 30px;
+  height: 30px;
+  margin: 0 1rem 0 0;
+  border-radius: 50px;
+  border: 2px solid white;
+}
+
+.card2 .info .name {
+  margin: 0;
+}
+
+.card2 .info .verified {
+  margin: 0;
+  opacity: .7;
+}
+
+.card2 .main-para {
+  font-weight: 600;
+  font-size: 1.3rem;
+  padding: 1rem 0;
+}
+
+.card2 .sub-para {
+  opacity: .5;
+  line-height: 1.3rem;
 }
 
 .card3 {
-  -ms-grid-row: 2;
-  -ms-grid-column: 1;
-  grid-area: 3;
-  background-color: skyblue;
   -ms-grid-column: 1;
   grid-column: 1;
   -ms-grid-row: 2;
   grid-row: 2;
+  color: black;
+  background-color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 2rem;
+  border-radius: 10px;
+}
+
+.card3 .info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.card3 .info .pic {
+  width: 30px;
+  height: 30px;
+  margin: 0 1rem 0 0;
+  border-radius: 50px;
+  border: 2px solid white;
+}
+
+.card3 .info .name {
+  margin: 0;
+}
+
+.card3 .info .verified {
+  margin: 0;
+  opacity: .7;
+}
+
+.card3 .main-para {
+  font-weight: 600;
+  font-size: 1.3rem;
+  padding: 1rem 0;
+}
+
+.card3 .sub-para {
+  opacity: .5;
+  line-height: 1.3rem;
 }
 
 .card4 {
-  -ms-grid-row: 2;
-  -ms-grid-column: 2;
-  -ms-grid-column-span: 2;
-  grid-area: 4;
-  background-color: slateblue;
   -ms-grid-column: 2;
   -ms-grid-column-span: 2;
   grid-column: 2 / 4;
   -ms-grid-row: 2;
   grid-row: 2;
+  color: white;
+  background-color: #19212e;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 2rem;
+  border-radius: 10px;
+}
+
+.card4 .info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.card4 .info .pic {
+  width: 30px;
+  height: 30px;
+  margin: 0 1rem 0 0;
+  border-radius: 50px;
+  border: 2px solid #ae90df;
+}
+
+.card4 .info .name {
+  margin: 0;
+}
+
+.card4 .info .verified {
+  margin: 0;
+  opacity: .7;
+}
+
+.card4 .main-para {
+  font-weight: 600;
+  font-size: 1.3rem;
+  padding: 1rem 0;
+}
+
+.card4 .sub-para {
+  opacity: .5;
+  line-height: 1.3rem;
 }
 
 .card5 {
-  -ms-grid-row: 1;
-  -ms-grid-row-span: 2;
-  -ms-grid-column: 4;
-  grid-area: 5;
-  background-color: seashell;
   -ms-grid-column: 4;
   -ms-grid-column-span: 1;
   grid-column: 4 / 5;
   -ms-grid-row: 1;
   -ms-grid-row-span: 2;
   grid-row: 1 / 3;
+  color: black;
+  background-color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 2rem;
+  border-radius: 10px;
+}
+
+.card5 .info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.card5 .info .pic {
+  width: 30px;
+  height: 30px;
+  margin: 0 1rem 0 0;
+  border-radius: 50px;
+  border: 2px solid white;
+}
+
+.card5 .info .name {
+  margin: 0;
+}
+
+.card5 .info .verified {
+  margin: 0;
+  opacity: .7;
+}
+
+.card5 .main-para {
+  font-weight: 600;
+  font-size: 1.3rem;
+  padding: 1rem 0;
+}
+
+.card5 .sub-para {
+  opacity: .5;
+  line-height: 1.3rem;
 }
 
 .attribution {
