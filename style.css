@@ -1,7 +1,7 @@
 body {
   margin: 0;
   padding: 0;
-  height: 100vh;
+  min-height: 100vh;
   font-size: 13px;
   background-color: #ecf2f8;
   font-family: "Barlow Semi Condensed", Arial, Helvetica, sans-serif;
@@ -18,7 +18,7 @@ body {
 }
 
 .container {
-  width: 80%;
+  width: 70%;
   margin: 0 auto;
   display: -ms-grid;
   display: grid;
@@ -53,7 +53,7 @@ body {
   z-index: -1;
   position: absolute;
   top: 0;
-  left: 65%;
+  right: 20%;
 }
 
 .card1 .info {
@@ -80,7 +80,7 @@ body {
 }
 
 .card1 .main-para {
-  font-weight: 600;
+  font-weight: 500;
   font-size: 1.3rem;
   padding: 1rem 0;
 }
@@ -131,7 +131,7 @@ body {
 }
 
 .card2 .main-para {
-  font-weight: 600;
+  font-weight: 500;
   font-size: 1.3rem;
   padding: 1rem 0;
 }
@@ -182,7 +182,7 @@ body {
 }
 
 .card3 .main-para {
-  font-weight: 600;
+  font-weight: 500;
   font-size: 1.3rem;
   padding: 1rem 0;
 }
@@ -234,7 +234,7 @@ body {
 }
 
 .card4 .main-para {
-  font-weight: 600;
+  font-weight: 500;
   font-size: 1.3rem;
   padding: 1rem 0;
 }
@@ -286,7 +286,7 @@ body {
 }
 
 .card5 .main-para {
-  font-weight: 600;
+  font-weight: 500;
   font-size: 1.3rem;
   padding: 1rem 0;
 }
@@ -306,7 +306,7 @@ body {
   color: #3e52a3;
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1250px) {
   .container {
     width: 90%;
   }
@@ -325,6 +325,12 @@ body {
     -ms-grid-columns: (1fr)[1];
         grid-template-columns: repeat(1, 1fr);
         grid-template-areas: "card1 card1"  "card2 card2" "card3 card3" "card4 card4" "card5 card5" "card5 card5";
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .card1 .icon {
+    right: 5%;
   }
 }
 /*# sourceMappingURL=style.css.map */

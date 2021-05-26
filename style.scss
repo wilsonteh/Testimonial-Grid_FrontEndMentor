@@ -24,7 +24,7 @@ $bodyBg: hsl(210, 46%, 95%);
     border: 2px solid lighten($borderColor, 20%);
 }
 @mixin mainPara {
-    font-weight: 600;
+    font-weight: 500;
     font-size: 1.3rem;
     padding: 1rem 0;
 }
@@ -40,7 +40,7 @@ $bodyBg: hsl(210, 46%, 95%);
 body {
     margin: 0;  
     padding: 0;
-    height: 100vh;
+    min-height: 100vh;
     font-size: 13px;
     background-color: $bodyBg;
     font-family: "Barlow Semi Condensed", Arial, Helvetica, sans-serif;
@@ -50,7 +50,7 @@ body {
 }
 
 .container {
-    width: 80%;
+    width: 70%;
     margin: 0 auto;   
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -62,7 +62,6 @@ body {
 
 
 .card1 {
-    // grid-column: 1 / 3;
     z-index: -2;
     position: relative;
     @include card($violet, white, card1);
@@ -71,7 +70,7 @@ body {
         z-index: -1;
         position: absolute;
         top: 0;
-        left: 65%;
+        right: 20%;
     }
     .info {
         @include info()
@@ -96,8 +95,6 @@ body {
 }
 
 .card2 {
-    // grid-column: 3 / 4;
-    // grid-row: 1;
     @include card($darkGrayishBlue, white, card2)
 
     .info {
@@ -123,8 +120,6 @@ body {
 }
 
 .card3 {
-//     grid-column: 1;
-//     grid-row: 2;
     @include card(white, black, card3)
 
     .info {
@@ -150,8 +145,6 @@ body {
 }
 
 .card4 {
-    // grid-column: 2 / 4;
-    // grid-row: 2;
     @include card($darkBlackishBlue, white, card4)
 
     .info {
@@ -177,8 +170,6 @@ body {
 }
 
 .card5 {
-    // grid-column: 4 / 5;
-    // grid-row: 1 / 3;
     @include card(white, black, card5)
 
     .info {
@@ -215,7 +206,7 @@ body {
 }
 
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1250px) {
     .container {
         width: 90%;
     }
@@ -242,5 +233,10 @@ body {
         "card5 card5"
         "card5 card5";
     }
-    
+}
+
+@media screen and (max-width: 420px) {
+    .card1 .icon {
+        right: 5%;
+    }
 }
