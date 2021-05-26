@@ -4,7 +4,8 @@ $darkBlackishBlue: hsl(219, 29%, 14%);
 $lightGray: hsl(0, 0%, 81%);
 $bodyBg: hsl(210, 46%, 95%);
 
-@mixin card($bgColor, $color) {
+@mixin card($bgColor, $color, $cardArea) {
+    grid-area: $cardArea;
     color: $color;
     background-color: $bgColor;
     display: flex;
@@ -45,25 +46,34 @@ body {
 }
 
 .container {
-    width: 70%;
-    margin: 2rem auto 2rem auto;   
+    width: 80%;
+    margin: 0 auto;   
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(2, 1fr);
+    grid-auto-rows: minmax(100px, auto);
     grid-gap: 2rem;
+    grid-template-areas: "card1 card1 card2 card5"
+                         "card3 card4 card4 card5";
 }
 
 
 .card1 {
-    grid-area: 1;
-    grid-column: 1 / 3;
-    @include card($violet, white)
-
+    // grid-column: 1 / 3;
+    z-index: -2;
+    position: relative;
+    @include card($violet, white, card1);
+    
+    .icon {
+        z-index: -1;
+        position: absolute;
+        top: 0;
+        left: 65%;
+    }
     .info {
         @include info()
         
         .pic {
-            @include pic($violet)
+            @include pic($violet);
         }
         .name {
             margin: 0;
@@ -82,9 +92,9 @@ body {
 }
 
 .card2 {
-    grid-column: 3 / 4;
-    grid-row: 1;
-    @include card($darkGrayishBlue, white)
+    // grid-column: 3 / 4;
+    // grid-row: 1;
+    @include card($darkGrayishBlue, white, card2)
 
     .info {
         @include info()
@@ -109,9 +119,9 @@ body {
 }
 
 .card3 {
-    grid-column: 1;
-    grid-row: 2;
-    @include card(white, black)
+//     grid-column: 1;
+//     grid-row: 2;
+    @include card(white, black, card3)
 
     .info {
         @include info()
@@ -136,9 +146,9 @@ body {
 }
 
 .card4 {
-    grid-column: 2 / 4;
-    grid-row: 2;
-    @include card($darkBlackishBlue, white)
+    // grid-column: 2 / 4;
+    // grid-row: 2;
+    @include card($darkBlackishBlue, white, card4)
 
     .info {
         @include info()
@@ -163,9 +173,9 @@ body {
 }
 
 .card5 {
-    grid-column: 4 / 5;
-    grid-row: 1 / 3;
-    @include card(white, black)
+    // grid-column: 4 / 5;
+    // grid-row: 1 / 3;
+    @include card(white, black, card5)
 
     .info {
         @include info()
@@ -191,10 +201,42 @@ body {
 
 
 .attribution { 
-    font-size: 11px; 
-    text-align: center; 
+    font-size: 12px; 
+    text-align: center;
+    padding: 1rem 0;
 }
 
 .attribution a { 
     color: hsl(228, 45%, 44%); 
+}
+
+
+@media screen and (max-width: 1200px) {
+    .container {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 1064px) {
+    .container {
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-areas: 
+        "card1 card1 card1 card2 card2"
+        "card3 card3 card4 card4 card4"
+        "card5 card5 card5 card5 card5";
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-areas: 
+        "card1 card1" 
+        "card2 card2"
+        "card3 card3"
+        "card4 card4"
+        "card5 card5"
+        "card5 card5";
+    }
+    
 }
