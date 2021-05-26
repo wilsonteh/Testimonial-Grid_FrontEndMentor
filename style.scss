@@ -40,9 +40,13 @@ $bodyBg: hsl(210, 46%, 95%);
 body {
     margin: 0;  
     padding: 0;
+    height: 100vh;
     font-size: 13px;
     background-color: $bodyBg;
     font-family: "Barlow Semi Condensed", Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .container {
