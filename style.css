@@ -19,7 +19,7 @@ body {
 
 .container {
   width: 70%;
-  margin: 0 auto;
+  margin: 5rem auto 0 auto;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (1fr)[4];
